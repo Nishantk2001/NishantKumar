@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon_io/apple-touch-icon.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon_io/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon_io/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon_io/site.webmanifest" />
+
+    <title>Nishant Kumar</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("tobRrisoWH8N2uI37");
+      })();
+    </script>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#">NK<span>.</span></a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li class="link active"><a href="#home">Home</a></li>
+        <li class="link"><a href="#about">About</a></li>
+        <li class="link"><a href="#resume">Resume</a></li>
+        <li class="link"><a href="#project">Projects</a></li>
+        <li class="link"><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <header class="header" id="home">
+      <div class="section__container header__container">
+        <h4>Hello, I'm Nishant Kumar</h4>
+        <h1>FrontEnd Developer & UI Designer</h1>
+        <p class="section__description">
+          In the world of design, I fuse UI finesse with creative flair. As a
+          FrontEnd Developer, my portfolio is a visual journey where innovation
+          meets aesthetics. Welcome to a space where every pixel tells a story
+          and each interaction is a work of art.
+        </p>
+        <div class="header__btns">
+          <button class="btn btn__primary" id="download-cv">
+            Download CV <i class="ri-file-download-fill"></i>
+          </button>
+          <button class="btn btn__secondary">
+            <a href="#contact">Hire Me</a> <i class="ri-user-2-fill"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container about__container" id="about">
+      <div class="about__image">
+        <img src="assets/NIK.jpeg" alt="about" />
+      </div>
+      <div class="about__content">
+        <h4>Let's Introduce About Myself</h4>
+        <p class="section__description">
+          Hello, I'm Nishant, a passionate FrontEnd Development & Creative
+          Designer on a mission to elevate digital experiences. With a keen eye
+          for detail and a flair for creativity,
+          <span>I bring ideas to life in the digital realm.</span> My work is a
+          fusion of user-centric design and aesthetic innovation, creating
+          engaging and memorable interactions.
+        </p>
+        <p class="section__description">
+          Let's embark on a visual journey that
+          <span>transcends boundaries</span> and redefines the digital
+          landscape.
+        </p>
+        <div class="about__progress">
+          <h5>React Framework</h5>
+          <div class="about__progressbar" data-progress="95"><span></span></div>
+          <h5>JavaScript</h5>
+          <div class="about__progressbar" data-progress="85"><span></span></div>
+          <h5>HTML5/CSS3</h5>
+          <div class="about__progressbar" data-progress="90"><span></span></div>
+          <h5>Tailwind</h5>
+          <div class="about__progressbar" data-progress="80"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="service" id="service">
+      <div class="section__container service__container">
+        <h2 class="section__header">What We Do</h2>
+        <p class="section__description">
+          We craft seamless digital experiences, marrying intuitive UX design
+          with captivating visuals. From user-centric interfaces to engaging
+          visual storytelling, a mastery of the Adobe Creative Suite.
+        </p>
+        <div class="service__grid">
+          <div class="service__card">
+            <span><i class="ri-mac-line"></i></span>
+            <div>
+              <h4>FrontEnd Development</h4>
+              <p>
+                We provide tailored consultations with expert guidance to
+                optimize your product's usability, functionality, and overall
+                visual appeal.
+              </p>
+            </div>
+          </div>
+          <div class="service__card">
+            <span><i class="ri-quill-pen-fill"></i></span>
+            <div>
+              <h4>UI/UX Design</h4>
+              <p>
+                We specialize in creating cohesive visual elements that
+                communicate your brand's personality and resonate with your
+                target audience.
+              </p>
+            </div>
+          </div>
+          <div class="service__card">
+            <span><i class="ri-database-2-fill"></i></span>
+            <div>
+              <h4>BackEnd Development</h4>
+              <p>
+                Our meticulous prototyping services allow you to visualize your
+                designs early in the process, ensuring a user-friendly and
+                efficient final product.
+              </p>
+            </div>
+          </div>
+          <div class="service__card">
+            <span><i class="ri-heart-line"></i></span>
+            <div>
+              <h4>Graphic Design and Illustration</h4>
+              <p>
+                Elevate your content with striking visuals and designing
+                marketing materials through our graphic design and illustration
+                services.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container resume__container" id="resume">
+      <h2 class="section__header">My Qualifications</h2>
+      <p class="section__description">
+        Combined with a passion for continuous learning, my qualifications
+        extend beyond academia, encompassing hands-on projects and a commitment
+        to staying at the forefront of design trends.
+      </p>
+      <div class="resume__tabs">
+        <div class="resume__tablist">
+          <button class="btn active" data-tab="1">Education</button>
+          <button class="btn" data-tab="2">Experience</button>
+        </div>
+        <div class="resume__tabpanel">
+          <div class="panel__grid active" data-panel="1">
+            <div class="panel__card">
+              <span><i class="ri-graduation-cap-fill"></i></span>
+              <h4>Bachelor's in Technologly</h4>
+              <p class="section__description">Computer Science Engineering</p>
+              <p class="section__description">
+                Armed with a B.Tech Computer Science, I have honed my skills in
+                creating visually compelling narratives.
+              </p>
+            </div>
+            <div class="panel__card">
+              <span><i class="ri-graduation-cap-fill"></i></span>
+              <h4>Diploma in CE</h4>
+              <p class="section__description">Computer Enginnering</p>
+              <p class="section__description">
+                A Diploma in Computer Enginnering has equipped me with advanced
+                knowledge and expertise in enhancing interactions.
+              </p>
+            </div>
+            <div class="panel__card">
+              <span><i class="ri-file-marked-fill"></i></span>
+              <h4>Professional Certification in Web Development</h4>
+              <p class="section__description">
+                IT Training With AlphaNet Company
+              </p>
+              <p class="section__description">
+                A certification in Web Development underscores my commitment to
+                bridging the gap between design and functionality.
+              </p>
+            </div>
+          </div>
+          <div class="panel__grid" data-panel="2">
+            <div class="panel__card">
+              <span><i class="ri-computer-line"></i></span>
+              <h4>FrontEnd Developer</h4>
+              <p class="section__description">
+                FrontEnd Developer At AlphaNet.pvt
+              </p>
+              <p class="section__description">
+                In the role of a FrontEnd Developer, I have evolved to
+                specialize in user-Interface, merging aesthetics with
+                functionality.
+              </p>
+            </div>
+            <div class="panel__card">
+              <span><i class="ri-macbook-fill"></i></span>
+              <h4>FullStack InterShip</h4>
+              <p class="section__description">
+                FullStack Training with Coding Ninja
+              </p>
+              <p class="section__description">
+                As a FullStack InterShip trainee, I am dedicated to honing my
+                craft and cultivating creative instincts.
+              </p>
+            </div>
+            <div class="panel__card">
+              <span><i class="ri-quill-pen-line"></i></span>
+              <h4>Graphic Design</h4>
+              <p class="section__description">Shaping Vision into Impact</p>
+              <p class="section__description">
+                As a Graphic Designer, my focus extends beyond execution to
+                strategic design thinking.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banner">
+      <div class="section__container banner__container">
+        <div class="banner__card">
+          <h4>1+</h4>
+          <p>Years of Experience</p>
+        </div>
+        <div class="banner__card">
+          <h4>50+</h4>
+          <p>Completed Projects</p>
+        </div>
+        <div class="banner__card">
+          <h4>10+</h4>
+          <p>Satisfied Clients</p>
+        </div>
+        <div class="banner__card">
+          <h4>15+</h4>
+          <p>Global Reach</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="client">
+      <div class="section__container client__container">
+        <h2 class="section__header">Happy Clients Says</h2>
+        <p class="section__description">
+          The seamless integration of innovation and user-centric design in
+          their work has left a lasting impression on our clients and elevated
+          our digital presence.
+        </p>
+     
+        <div class="swiper">
+       
+          <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <div class="client__card">
+                <p>
+                  Their ability to create visually stunning and highly
+                  functional designs is exceptional. As the CEO of Digital
+                  Dynamics Agency, I have witnessed firsthand the positive
+                  impact they have on our projects.
+                </p>
+                <h4>Michael Rodriguez</h4>
+                <h5>CEO, Digital Dynamics Agency</h5>
+                <img src="assets/client-1.jpg" alt="client" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <p>
+                  Working with Cooper was a revelation! Their designs not only
+                  captured the essence of our brand but elevated it to new
+                  heights.
+                </p>
+                <h4>Sarah Johnson</h4>
+                <h5>Marketing Director, Tech Innovations Inc.</h5>
+                <img src="assets/client-2.jpg" alt="client" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <p>
+                  I had the pleasure of collaborating with them on a critical
+                  project for Innovate Startups. Their ability to translate our
+                  brand vision into a visually compelling user experience was
+                  truly impressive.
+                </p>
+                <h4>Alexandra Thompson</h4>
+                <h5>Founder, Innovate Startups</h5>
+                <img src="assets/client-3.jpg" alt="client" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  -->
+
+    <section class="section__container project__container" id="project">
+      <h2 class="section__header">It Helps Your Goals</h2>
+      <div class="project__grid">
+        <div class="project__card">
+          <img src="assets/Github.png" alt="project" />
+          <div class="project__content">
+            <h4>GitHub Profile Tracker</h4>
+            <p class="section__description">
+              The GitHub Profile Tracker is a web application built with
+              JavaScript that allows users to search for and track GitHub user
+              profiles.
+            </p>
+            <div>
+              <a href="#">Read More</a>
+              <div class="project__socials">
+                <a href="https://github.com/Nishantk2001/GitHub_ProfileTracker"
+                  ><i class="ri-github-fill"></i
+                ></a>
+                <a href="https://nishantk2001.github.io/GitHub_ProfileTracker/"
+                  ><i class="ri-eye-line"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project__card">
+          <img src="assets/Worldwise.png" alt="project" />
+          <div class="project__content">
+            <h4>World Wise</h4>
+            <p class="section__description">
+              A worldWise map that tracks your footsteps into every city you can
+              think of Never forget your wonderful experiences.
+            </p>
+            <div>
+              <a href="#">Read More</a>
+              <div class="project__socials">
+                <a href="https://github.com/Nishantk2001/worldwise"
+                  ><i class="ri-github-fill"></i
+                ></a>
+                <a href="https://worldwise-rosy.vercel.app/"
+                  ><i class="ri-eye-line"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project__card">
+          <img src="assets/Infinity.png" alt="project" />
+          <div class="project__content">
+            <h4>Infinity</h4>
+            <p class="section__description">
+              INFINITY is a cutting-edge social media app designed to connect
+              people worldwide through visually compelling content.
+            </p>
+            <div>
+              <a href="#">Read More</a>
+              <div class="project__socials">
+                <a href="https://github.com/Nishantk2001/INFINITY"
+                  ><i class="ri-github-fill"></i
+                ></a>
+                <a href="https://github.com/Nishantk2001/INFINITY"
+                  ><i class="ri-eye-line"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project__card">
+          <img src="assets/PassWord.png" alt="project" />
+          <div class="project__content">
+            <h4>Password Generator</h4>
+            <p class="section__description">
+              The Password Generator project is a software application designed
+              to generate strong and secure passwords for users.
+            </p>
+            <div>
+              <a href="#">Read More</a>
+              <div class="project__socials">
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-eye-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project__card">
+          <img src="assets/TheWildOasis.png" alt="project" />
+          <div class="project__content">
+            <h4>The Wild Oasis</h4>
+            <p class="section__description">
+              The Wild Oasis Project is a unique initiative that invites you to
+              escape the hustle and bustle of everyday life and immerse yourself
+              in the tranquility of nature.
+            </p>
+            <div>
+              <a href="#">Read More</a>
+              <div class="project__socials">
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-eye-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project__card">
+          <img src="assets/Github.png" alt="project" />
+          <div class="project__content">
+            <h4>Github Profile Tracker</h4>
+            <p class="section__description">
+              The GitHub Profile Tracker is a web application built with
+              JavaScript that allows users to search for and track GitHub user
+              profiles.
+            </p>
+            <div>
+              <a href="#">Read More</a>
+              <div class="project__socials">
+                <a href="#"><i class="ri-github-fill"></i></a>
+                <a href="#"><i class="ri-eye-line"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="projectbtn">
+        <button id="prevBtn">
+          <i class="ri-arrow-left-s-line"></i>
+        </button>
+        <button id="nextBtn"><i class="ri-arrow-right-s-line"></i></button>
+      </div>
+    </section>
+
+    <footer class="footer" id="contact">
+      <div class="section__container footer__container">
+        <h2 class="section__header">Get in Touch</h2>
+        <p class="section__description">
+          I'd love to hear from you! Whether you have a project in mind, a
+          question, or just want to say hello, feel free to reach out. Your
+          ideas and inquiries are always welcome.
+        </p>
+        <div class="footer__grid">
+          <div class="footer__content">
+            <h4>Nishant Kumar</h4>
+            <p>
+              Explore more of my work, connect with me on social media, or drop
+              a message.
+            </p>
+            <p>
+              Let's continue the design conversation and embark on new creative
+              journeys together.
+            </p>
+            <p>Thank you for visiting!</p>
+            <a href="mailto:nishantk.28101@gmail.com"
+              ><p><i class="ri-mail-line"></i> nishant.k28101@gmail.com</p></a
+            >
+            <div class="footer__socials">
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a href="#"><i class="ri-instagram-fill"></i></a>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+              <a href="#"><i class="ri-github-fill"></i></a>
+            </div>
+          </div>
+          <div class="footer__form">
+            <form action="#" id="contactForm">
+              <div class="input__row">
+                <input type="text" id="name" placeholder="Your Name" required />
+                <input
+                  type="text"
+                  id="emailid"
+                  placeholder="Your Email"
+                  required />
+              </div>
+              <input type="text" id="subject" placeholder="Your Subject" />
+              <textarea id="msgContent" placeholder="Your Message"></textarea>
+
+              <div class="alert">Your Message is Sucessfully submitted.</div>
+
+              <button
+                class="btn btn__primary"
+                type="submit"
+                onclick="SendMail()">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright
+        <a href="https://www.linkedin.com/in/nishant-kumar-3104a2259">© </a
+        >NishantKumar. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+
+    <!-- Supabase Connectivity -->
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <script>
+      const { createClient } = supabase;
+      supabase = createClient(
+        "https://qslbahvfnocpykbesfss.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzbGJhaHZmbm9jcHlrYmVzZnNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTkzNTU1MTQsImV4cCI6MjAxNDkzMTUxNH0.WU2IRh6HC77u-ZLIl8Y4t1nYcGJrjhBQhrgjnfbFt1I"
+      );
+
+      const form = document.querySelector("#contactForm");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formInputs = form.querySelectorAll("input, textarea");
+
+        let submision = {};
+
+        formInputs.forEach((element) => {
+          const { value, id } = element;
+          if (value) {
+            submision[id] = value;
+          }
+        });
+        console.log(submision);
+
+        const { error } = await supabase
+          .from("entries")
+          .insert([submision], { returning: "minimal" });
+
+        document.querySelector(".alert").style.display = "block";
+
+        // Hide alert after 3 seconds
+        setTimeout(function () {
+          document.querySelector(".alert").style.display = "none";
+        }, 2000);
+
+        // if (error) {
+        //     alert('There was an error please try again')
+        // } else {
+        //     alert('Thanks for contacting us')
+        // }
+
+        formInputs.forEach((element) => (element.value = ""));
+      });
+    </script>
+  </body>
+</html>
