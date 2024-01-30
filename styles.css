@@ -923,4 +923,9 @@ nav.sticky .link a:hover{
   .message .text.text-1{
     font-weight: 400;
   }
+  .toast-content .check{
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+  }
 }
