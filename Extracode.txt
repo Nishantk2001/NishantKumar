@@ -1,0 +1,106 @@
+testemonial code 
+ <!-- <section class="client">
+      <div class="section__container client__container">
+        <h2 class="section__header">Happy Clients Says</h2>
+        <p class="section__description">
+          The seamless integration of innovation and user-centric design in
+          their work has left a lasting impression on our clients and elevated
+          our digital presence.
+        </p>
+     
+        <div class="swiper">
+       
+          <div class="swiper-wrapper">
+          
+            <div class="swiper-slide">
+              <div class="client__card">
+                <p>
+                  Their ability to create visually stunning and highly
+                  functional designs is exceptional. As the CEO of Digital
+                  Dynamics Agency, I have witnessed firsthand the positive
+                  impact they have on our projects.
+                </p>
+                <h4>Michael Rodriguez</h4>
+                <h5>CEO, Digital Dynamics Agency</h5>
+                <img src="assets/client-1.jpg" alt="client" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <p>
+                  Working with Cooper was a revelation! Their designs not only
+                  captured the essence of our brand but elevated it to new
+                  heights.
+                </p>
+                <h4>Sarah Johnson</h4>
+                <h5>Marketing Director, Tech Innovations Inc.</h5>
+                <img src="assets/client-2.jpg" alt="client" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="client__card">
+                <p>
+                  I had the pleasure of collaborating with them on a critical
+                  project for Innovate Startups. Their ability to translate our
+                  brand vision into a visually compelling user experience was
+                  truly impressive.
+                </p>
+                <h4>Alexandra Thompson</h4>
+                <h5>Founder, Innovate Startups</h5>
+                <img src="assets/client-3.jpg" alt="client" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  -->
+
+
+
+<!-- Supabase Connectivity -->
+
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
+    <script>
+      const { createClient } = supabase;
+      supabase = createClient(
+        "https://qslbahvfnocpykbesfss.supabase.co",
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzbGJhaHZmbm9jcHlrYmVzZnNzIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTkzNTU1MTQsImV4cCI6MjAxNDkzMTUxNH0.WU2IRh6HC77u-ZLIl8Y4t1nYcGJrjhBQhrgjnfbFt1I"
+      );
+
+      const form = document.querySelector("#contactForm");
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const formInputs = form.querySelectorAll("input, textarea");
+
+        let submision = {};
+
+        formInputs.forEach((element) => {
+          const { value, id } = element;
+          if (value) {
+            submision[id] = value;
+          }
+        });
+        console.log(submision);
+
+        const { error } = await supabase
+          .from("entries")
+          .insert([submision], { returning: "minimal" });
+
+        document.querySelector(".toast").style.display = "block";
+
+        // Hide alert after 5 seconds
+        setTimeout(function () {
+          document.querySelector(".").style.display = "none";
+        }, 5000);
+
+        // if (error) {
+        //     alert('There was an error please try again')
+        // } else {
+        //     alert('Thanks for contacting us')
+        // }
+
+        formInputs.forEach((element) => (element.value = ""));
+      });
+    </script>

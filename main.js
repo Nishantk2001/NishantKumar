@@ -100,6 +100,11 @@ ScrollReveal().reveal(".service__card", {
   interval: 500,
 });
 
+ScrollReveal().reveal(".banner__card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
 const tabList = document.querySelector(".resume__tablist");
 
 tabList.addEventListener("click", (e) => {
@@ -143,15 +148,12 @@ ScrollReveal().reveal(".blog__card", {
 
 // ...............ProjectSliderButton...............
 document.addEventListener("DOMContentLoaded", function () {
-  // Get project container and project cards
   var projectContainer = document.getElementById("project");
   var projectCards = projectContainer.querySelectorAll(".project__card");
 
-  // Get navigation buttons
   var prevBtn = document.getElementById("prevBtn");
   var nextBtn = document.getElementById("nextBtn");
 
-  // Set initial index
   var currentIndex = 0;
 
   // Function to show/hide project cards based on the current index
@@ -185,6 +187,25 @@ document.addEventListener("DOMContentLoaded", function () {
     updateSlider();
   });
 
-  // Initialize the slider
   updateSlider();
 });
+
+// Toast popup
+const submitbtn = document.querySelector("#submitbtn"),
+  toast = document.querySelector(".toast");
+closeIcon = document.querySelector(".close");
+progress = document.querySelector(".progress");
+
+submitbtn.addEventListener("click", () => {
+  toast.classList.add("active");
+  progress.classList.add("active");
+});
+closeIcon.addEventListener("click", () => {
+  toast.classList.remove("active");
+});
+document.querySelector(".toast").style.display = "block";
+
+// Hide alert after 5 seconds
+setTimeout(function () {
+  document.querySelector(".toast").style.display = "none";
+}, 5000);

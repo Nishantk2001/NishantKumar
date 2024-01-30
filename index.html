@@ -273,62 +273,6 @@
       </div>
     </section>
 
-    <!-- <section class="client">
-      <div class="section__container client__container">
-        <h2 class="section__header">Happy Clients Says</h2>
-        <p class="section__description">
-          The seamless integration of innovation and user-centric design in
-          their work has left a lasting impression on our clients and elevated
-          our digital presence.
-        </p>
-     
-        <div class="swiper">
-       
-          <div class="swiper-wrapper">
-          
-            <div class="swiper-slide">
-              <div class="client__card">
-                <p>
-                  Their ability to create visually stunning and highly
-                  functional designs is exceptional. As the CEO of Digital
-                  Dynamics Agency, I have witnessed firsthand the positive
-                  impact they have on our projects.
-                </p>
-                <h4>Michael Rodriguez</h4>
-                <h5>CEO, Digital Dynamics Agency</h5>
-                <img src="assets/client-1.jpg" alt="client" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="client__card">
-                <p>
-                  Working with Cooper was a revelation! Their designs not only
-                  captured the essence of our brand but elevated it to new
-                  heights.
-                </p>
-                <h4>Sarah Johnson</h4>
-                <h5>Marketing Director, Tech Innovations Inc.</h5>
-                <img src="assets/client-2.jpg" alt="client" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="client__card">
-                <p>
-                  I had the pleasure of collaborating with them on a critical
-                  project for Innovate Startups. Their ability to translate our
-                  brand vision into a visually compelling user experience was
-                  truly impressive.
-                </p>
-                <h4>Alexandra Thompson</h4>
-                <h5>Founder, Innovate Startups</h5>
-                <img src="assets/client-3.jpg" alt="client" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>  -->
-
     <section class="section__container project__container" id="project">
       <h2 class="section__header">It Helps Your Goals</h2>
       <div class="project__grid">
@@ -502,7 +446,21 @@
                 ><i class="ri-github-fill"></i
               ></a>
             </div>
+            <!-- ...............PopUp Message............. -->
+            <div class="toast">
+              <div class="toast-content">
+                <i class="ri-check-line check"></i>
+                <div class="message">
+                  <span class="text text-1">Success</span>
+                  <span class="text text-2">Message sent successfully!🚀</span>
+                </div>
+              </div>
+              <i class="ri-close-line close"></i>
+              <div class="progress"></div>
+            </div>
+            <!-- .......................Popup End..................... -->
           </div>
+
           <div class="footer__form">
             <form action="#" id="contactForm">
               <div class="input__row">
@@ -516,10 +474,11 @@
               <input type="text" id="subject" placeholder="Your Subject" />
               <textarea id="msgContent" placeholder="Your Message"></textarea>
 
-              <div class="alert">Your Message is Sucessfully submitted.</div>
+              <!-- <div class="alert">Your Message is Sucessfully submitted.</div> -->
 
               <button
                 class="btn btn__primary"
+                id="submitbtn"
                 type="submit"
                 onclick="SendMail()">
                 Send Message
@@ -529,9 +488,9 @@
         </div>
       </div>
       <div class="footer__bar">
-        Copyright
-        <a href="https://www.linkedin.com/in/nishant-kumar-3104a2259">© </a
-        >NishantKumar. All rights reserved.
+        Thanks for visiting 🌟
+        <a href="https://www.linkedin.com/in/nishant-kumar-3104a2259">©</a
+        >NishantKumar.
       </div>
     </footer>
 
@@ -570,12 +529,12 @@
           .from("entries")
           .insert([submision], { returning: "minimal" });
 
-        document.querySelector(".alert").style.display = "block";
+        document.querySelector(".toast").style.display = "block";
 
-        // Hide alert after 3 seconds
+        // Hide alert after 5 seconds
         setTimeout(function () {
-          document.querySelector(".alert").style.display = "none";
-        }, 2000);
+          document.querySelector(".toast").style.display = "none";
+        }, 5000);
 
         // if (error) {
         //     alert('There was an error please try again')
