@@ -837,7 +837,7 @@ nav.sticky .link a:hover{
   background: #fff;
   padding: 5px 5px 5px 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-  border-left: 6px solid #4070f4;
+  border-left: 6px solid var(--primary-color);
   overflow: hidden;
   transform: translateX(calc(100% + 30px));
   transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
@@ -855,7 +855,7 @@ nav.sticky .link a:hover{
   justify-content: center;
   height: 35px;
   width: 35px;
-  background-color: #4070f4;
+  background-color: var(--primary-color);
   color: #fff;
   font-size: 20px;
   border-radius: 50%;
@@ -884,7 +884,7 @@ nav.sticky .link a:hover{
   opacity: 0.7;
 }
 .toast .close:hover{
-  color: #4070f4;
+  color: var(--primary-color);
 }
 .toast .progress{
   position: absolute;
@@ -901,7 +901,7 @@ nav.sticky .link a:hover{
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: #4070f4;
+  background-color: var(--primary-color);
 }
 .progress.active:before{
   animation: progress 5s linear forwards;
