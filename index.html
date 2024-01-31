@@ -365,8 +365,7 @@
             <h4>The Wild Oasis</h4>
             <p class="section__description">
               The Wild Oasis Project is a unique initiative that invites you to
-              escape the hustle and bustle of everyday life and immerse yourself
-              in the tranquility of nature.
+              escape the hustle and bustle of everyday life.
             </p>
             <div>
               <a href="#">Read More</a>
@@ -398,10 +397,8 @@
         </div>
       </div>
       <div class="projectbtn">
-        <button id="prevBtn">
-          <i class="ri-arrow-left-s-line"></i>
-        </button>
-        <button id="nextBtn"><i class="ri-arrow-right-s-line"></i></button>
+        <button id="prevBtn"><i class="ri-arrow-left-s-line"></i>Back</button>
+        <button id="nextBtn">Next<i class="ri-arrow-right-s-line"></i></button>
       </div>
     </section>
 
@@ -446,19 +443,6 @@
                 ><i class="ri-github-fill"></i
               ></a>
             </div>
-            <!-- ...............PopUp Message............. -->
-            <div class="toast">
-              <div class="toast-content">
-                <i class="ri-check-line check"></i>
-                <div class="message">
-                  <span class="text text-1">Success</span>
-                  <span class="text text-2">Message sent successfully!</span>
-                </div>
-              </div>
-              <i class="ri-close-line close"></i>
-              <div class="progress"></div>
-            </div>
-            <!-- .......................Popup End..................... -->
           </div>
 
           <div class="footer__form">
@@ -474,7 +458,7 @@
               <input type="text" id="subject" placeholder="Your Subject" />
               <textarea id="msgContent" placeholder="Your Message"></textarea>
 
-              <!-- <div class="alert">Your Message is Sucessfully submitted.</div> -->
+              <div class="alert">Your Message is Sucessfully submitted.</div>
 
               <button
                 class="btn btn__primary"
@@ -529,12 +513,12 @@
           .from("entries")
           .insert([submision], { returning: "minimal" });
 
-        document.querySelector(".toast").style.display = "block";
+        document.querySelector(".alert").style.display = "block";
 
         // Hide alert after 5 seconds
         setTimeout(function () {
-          document.querySelector(".toast").style.display = "none";
-        }, 5000);
+          document.querySelector(".alert").style.display = "none";
+        }, 3000);
 
         // if (error) {
         //     alert('There was an error please try again')

@@ -189,23 +189,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
   updateSlider();
 });
-
-// Toast popup
-const submitbtn = document.querySelector("#submitbtn"),
-  toast = document.querySelector(".toast");
-closeIcon = document.querySelector(".close");
-progress = document.querySelector(".progress");
-
-submitbtn.addEventListener("click", () => {
-  toast.classList.add("active");
-  progress.classList.add("active");
-});
-closeIcon.addEventListener("click", () => {
-  toast.classList.remove("active");
-});
-document.querySelector(".toast").style.display = "block";
-
-// Hide alert after 5 seconds
-setTimeout(function () {
-  document.querySelector(".toast").style.display = "none";
-}, 5000);

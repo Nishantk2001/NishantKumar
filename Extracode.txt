@@ -104,3 +104,120 @@ testemonial code
         formInputs.forEach((element) => (element.value = ""));
       });
     </script>
+
+     <!-- ...............PopUp Message............. -->
+            <div class="toast">
+              <div class="toast-content">
+                <i class="ri-check-line check"></i>
+                <div class="message">
+                  <span class="text text-1">Success</span>
+                  <span class="text text-2">Message sent successfully!</span>
+                </div>
+              </div>
+              <i class="ri-close-line close"></i>
+              <div class="progress"></div>
+            </div>
+            <!-- .......................Popup End..................... -->
+          </div>
+
+
+
+          .toast{
+  position: absolute;
+  right: 30px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 5px 5px 5px 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+  border-left: 6px solid var(--primary-color);
+  overflow: hidden;
+  transform: translateX(calc(100% + 30px));
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.35);
+}
+.toast.active{
+  transform: translateX(0%);
+}
+.toast .toast-content{
+  display: flex;
+  align-items: center;
+}
+.toast-content .check{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  width: 35px;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50%;
+}
+.toast-content .message{
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+}
+.message .text{
+  font-size: 20px;
+  font-weight: 200;;
+  color: #666666;
+}
+.message .text.text-1{
+  font-weight: 500;
+  color: #333;
+}
+.toast .close{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  padding: 5px;
+  color:#000;
+  cursor: pointer;
+  opacity: 0.7;
+}
+.toast .close:hover{
+  color: var(--primary-color);
+}
+.toast .progress{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background: #ddd;
+}
+.toast .progress:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--primary-color);
+}
+.progress.active:before{
+  animation: progress 5s linear forwards;
+}
+@keyframes progress {
+  100%{
+      right: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .toast {
+    padding: 2px 2px 2px 2px;
+       margin-left:20px;
+  }
+  .message .text{
+    font-size: 16px;
+    font-weight: 100;;
+  }
+  .message .text.text-1{
+    font-weight: 400;
+  }
+  .toast-content .check{
+    height: 25px;
+    width: 25px;
+    font-size: 20px;
+  }
+}
