@@ -44,8 +44,8 @@ navLinks.addEventListener("click", (e) => {
 const downloadCv = document.getElementById("download-cv");
 downloadCv.addEventListener("click", (e) => {
   const aElement = document.createElement("a");
-  aElement.setAttribute("download", "CV.pdf");
-  aElement.setAttribute("href", "/assets/NKResume.pdf");
+  aElement.setAttribute("download", "NISHANT_KUMAR_RESUME.pdf");
+  aElement.setAttribute("href", "/assets/NISHANT_KUMAR.pdf");
   aElement.click();
 });
 
@@ -97,12 +97,12 @@ ScrollReveal().reveal(".about__content .about__progress", {
 
 ScrollReveal().reveal(".service__card", {
   ...scrollRevealOption,
-  interval: 500,
+  interval: 300,
 });
 
 ScrollReveal().reveal(".banner__card", {
   ...scrollRevealOption,
-  interval: 500,
+  interval: 300,
 });
 
 const tabList = document.querySelector(".resume__tablist");

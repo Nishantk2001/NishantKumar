@@ -114,8 +114,8 @@ nav.sticky {
   top:0;
   background-color: var(--primary-color);
   transition: all 1.2s ease; 
-  border-bottom-right-radius: 5px;
-  border-bottom-left-radius: 5px;
+  /* border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px; */
 }
 nav.sticky a span{
   color:#fff;
@@ -721,7 +721,8 @@ nav.sticky .link a:hover{
 }
 @media(width> 1200px){
   nav.sticky{
-    margin-left: 9.2%;
+    width: 100%;
+    /* margin-left: 9.2%; */
   }
 
 
@@ -733,8 +734,8 @@ nav.sticky .link a:hover{
 
   nav {
     position: static;
-    padding: 1rem 1rem;
-    max-width: var(--max-width);
+    padding: 1rem 4rem;
+    /* max-width: var(--max-width); */
     margin-inline: auto;
     display: flex;
     align-items: center;
