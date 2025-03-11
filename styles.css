@@ -568,9 +568,9 @@ nav.sticky .link a:hover{
   flex: 0 0 auto;
   transition: transform 0.5s ease-in-out;
 }
-/* .project__card img{
+.project__card img{
   height: 300px;
-} */
+}
 
 .project__content {
   border-radius: 10px;
